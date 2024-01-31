@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject} from "rxjs";
+import {Qsi} from "../interfaces";
 
 @Injectable({
   providedIn: 'root'
 })
 export class QsiService {
   $hasInterceptLoaded: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  $QSI: BehaviorSubject<any> = new BehaviorSubject<any>({});
+  $QSI: BehaviorSubject<Qsi | {}> = new BehaviorSubject<Qsi | {}>({});
 
   constructor() { }
 
@@ -14,7 +15,7 @@ export class QsiService {
     this.$hasInterceptLoaded.next(value);
   }
 
-  loadQSI(qsiData: any) {
+  loadQSI(qsiData: Qsi) {
     this.$QSI.next(qsiData);
   }
 
@@ -27,7 +28,7 @@ export class QsiService {
     return this.$hasInterceptLoaded.value;
   }
 
-  get QSI() {
-    return this.$QSI.value;
+  get QSI(): Qsi {
+    return this.$QSI.value as Qsi;
   }
 }

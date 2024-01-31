@@ -15,7 +15,7 @@ export class MainComponent implements OnInit {
     this.qsi.$QSI.subscribe(res => {
       if (Object.keys(res).length > 0) {
         console.log(this.qsi.QSI);
-        this.qsi.QSI.load();
+        // this.qsi.QSI.load();
       }
     })
 
@@ -23,14 +23,14 @@ export class MainComponent implements OnInit {
 
   runIntercept() {
     if (this.qsi.hasInterceptLoaded) {
-      this.qsi.QSI.run()
+      this.qsi.QSI.API.run()
     }
   }
 
   handleClick() {
     if (this.qsi.hasInterceptLoaded) {
-      this.qsi.QSI.unload();
-      this.qsi.QSI.load().done(this.runIntercept());
+      this.qsi.QSI.API.unload();
+      this.qsi.QSI.API.load().done(this.runIntercept());
     }
   }
 }
