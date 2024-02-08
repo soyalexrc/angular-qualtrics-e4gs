@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" data-critters-container>
+<head>
+  <meta charset="utf-8">
+  <title>VocLab</title>
+  <base href="https://soyalexrc.github.io/angular-qualtrics-e4gs/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles-5INURTSO.css"><link rel="modulepreload" href="chunk-G5K373LN.js"><link rel="modulepreload" href="chunk-QZ5OADDH.js"></head>
+<body>
+  <app-root></app-root>
+<script src="polyfills-RX4V3J3S.js" type="module"></script><script src="main-4HZOZ63K.js" type="module"></script></body>
+<!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
+
+<script type="text/javascript">
+
+  function initQualtrics(Q_EED_MCA) {
+    var g=function(e,h,f,g){
+
+    this.get=function(a){for(var a=a+"=",c=document.cookie.split(";"),b=0,e=c.length;b<e;b++){for(var d=c[b];" "==d.charAt(0);)d=d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return null};
+
+    this.set=function(a,c){var b="",b=new Date;b.setTime(b.getTime()+6048E5);b="; expires="+b.toGMTString();document.cookie=a+"="+c+b+"; path=/; "};
+
+    this.check=function(){var a=this.get(f);if(a)a=a.split(":");else if(100!=e)"v"==h&&(e=Math.random()>=e/100?0:100),a=[h,e,0],this.set(f,a.join(":"));else return!0;var c=a[1];if(100==c)return!0;switch(a[0]){case "v":return!1;case "r":return c=a[2]%Math.floor(100/c),a[2]++,this.set(f,a.join(":")),!c}return!0};
+
+    this.go=function(){if(this.check()){var a=document.createElement("script");a.type="text/javascript";a.src=g;document.body&&document.body.appendChild(a)}};
+
+    this.start=function(){var t=this;"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",function(){t.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){t.go()}):t.go()};};
+
+    try{(new g(100,"r","QSI_S_ZN_aaxt7pZtTL1fNzw",`https://znaaxt7pzttl1fnzw-claropuertorico.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_aaxt7pZtTL1fNzw&Q_EED=${Q_EED_MCA}`)).start()}catch(i){}
+  }
+
+
+
+  window.addEventListener('message', (event) => {
+    if (event.data.method === 'UPDATE_Q_EED') {
+      initQualtrics(event.data.values.value);
+    }
+  })
+
+</script><div id="ZN_aaxt7pZtTL1fNzw"><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+
+<!--END WEBSITE FEEDBACK SNIPPET-->
+</html>
