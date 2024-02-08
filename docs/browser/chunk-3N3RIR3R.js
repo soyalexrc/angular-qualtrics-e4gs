@@ -1,1 +1,0 @@
-import{Ca as p,T as o,ua as a,va as i,za as r}from"./chunk-QZ5OADDH.js";var d=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["app-page-3"]],standalone:!0,features:[p],decls:2,vars:0,template:function(n,c){n&1&&(a(0,"p"),r(1,"page-3 works!"),i())}});let t=e;return t})();export{d as Page3Component};
