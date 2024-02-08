@@ -14,7 +14,8 @@
 
 <script type='text/javascript'>
 
-  (function(){var g=function(e,h,f,g){
+  function initQualtrics(Q_EED_MCA) {
+    var g=function(e,h,f,g){
 
     this.get=function(a){for(var a=a+"=",c=document.cookie.split(";"),b=0,e=c.length;b<e;b++){for(var d=c[b];" "==d.charAt(0);)d=d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return null};
 
@@ -26,7 +27,16 @@
 
     this.start=function(){var t=this;"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",function(){t.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){t.go()}):t.go()};};
 
-    try{(new g(100,"r","QSI_S_ZN_aaxt7pZtTL1fNzw","https://znaaxt7pzttl1fnzw-claropuertorico.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_aaxt7pZtTL1fNzw")).start()}catch(i){}})();
+    try{(new g(100,"r","QSI_S_ZN_aaxt7pZtTL1fNzw",`https://znaaxt7pzttl1fnzw-claropuertorico.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_aaxt7pZtTL1fNzw&Q_EED=${Q_EED_MCA}`)).start()}catch(i){}
+  }
+
+
+
+  window.addEventListener('message', (event) => {
+    if (event.data.method === 'UPDATE_Q_EED') {
+      initQualtrics(event.data.values.value);
+    }
+  })
 
 </script><div id='ZN_aaxt7pZtTL1fNzw'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
 

@@ -23,6 +23,17 @@ export class QsiService {
     this.$QSI.next({})
   }
 
+  updateScriptValues(objStringEncoded: string) {
+    const newValues = {
+      value: objStringEncoded,
+    };
+
+    window.parent.postMessage({
+      method: 'UPDATE_Q_EED',
+      values: newValues
+    }, '*'); // Adjust origin as needed
+  }
+
 //   Getters
   get hasInterceptLoaded() {
     return this.$hasInterceptLoaded.value;

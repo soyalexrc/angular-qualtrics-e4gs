@@ -83,6 +83,7 @@ export interface API {
   run: () => void,
   load: any,
   unload: any,
+  getIntercept: (intercept_id: string) => Promise<any>,
 }
 
 export interface AssetManager {
@@ -171,7 +172,7 @@ export interface InterceptReevaluator {
 }
 
 export interface EvaluationResults {
-  SI_3gDHHZfifLzEMnQ: EvaluationResultsSI3GDHHZfifLzEMnQ;
+  ZN_aaxt7pZtTL1fNzw: EvaluationResultsSI3GDHHZfifLzEMnQ;
 }
 
 export interface EvaluationResultsSI3GDHHZfifLzEMnQ {
@@ -229,7 +230,7 @@ export interface Component {
   "JSModule-Core":                      number;
   allAssetDefinitionsAndJSModules:      number;
   "JSModule-PopOver":                   number;
-  "AssetDefinition-SI_3gDHHZfifLzEMnQ": number;
+  "AssetDefinition-ZN_aaxt7pZtTL1fNzw": number;
   "AssetDefinition-CR_ahN1LKwTJDDK8GG": number;
 }
 
@@ -288,7 +289,7 @@ export interface ZnAaxt7PZtTl1FNzw {
 }
 
 export interface Intercepts {
-  SI_3gDHHZfifLzEMnQ: InterceptsSI3GDHHZfifLzEMnQ;
+  ZN_aaxt7pZtTL1fNzw: InterceptsSI3GDHHZfifLzEMnQ;
 }
 
 export interface InterceptsSI3GDHHZfifLzEMnQ {
@@ -590,7 +591,7 @@ export interface RequestData {
 }
 
 export interface ValidIntercepts {
-  SI_3gDHHZfifLzEMnQ: string;
+  ZN_aaxt7pZtTL1fNzw: string;
 }
 
 export interface GRetryer {
